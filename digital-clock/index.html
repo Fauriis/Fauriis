@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>JavaScript Digital Clock</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+  <script
+    src="script.js"
+    defer
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+</head>
+
+<body>
+  <section class="spacer layer2 flip">
+    <div class="blob-content">
+      <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id="session">AM</span>
+      </div>
+    </div>
+
+    <svg
+      id="visual"
+      class="blob-motion"
+      viewBox="0 0 900 600"
+      width="900"
+      height="600"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+    >
+      <g transform="translate(446.62525090536974 292.9682283969691)">
+        <path
+          id="blob1"
+          d="M78.8 -33C100.5 -8 115.2 33.5 100.9 57.2C86.6 81 43.3 87 6.5 83.3C-30.3 79.5 -60.6 66 -79.8 39.4C-99 12.8 -107.1 -26.8 -91.9 -48.1C-76.8 -69.3 -38.4 -72.2 -4.9 -69.3C28.6 -66.5 57.2 -58 78.8 -33"
+          fill="#ff9f5c"
+        ></path>
+      </g>
+
+      <g
+        transform="translate(458.9295581170613 295.061437953381)"
+        style="visibility: hidden"
+      >
+        <path
+          id="blob2"
+          d="M89.3 -55.9C100.2 -32.8 82.6 2.3 62.9 35C43.3 67.7 21.7 97.8 -5.3 100.9C-32.3 104 -64.7 80 -86.3 46.2C-108 12.3 -118.9 -31.3 -102.8 -57.5C-86.6 -83.7 -43.3 -92.3 -2 -91.2C39.3 -90 78.5 -79 89.3 -55.9"
+          fill="#ff9f5c"
+        ></path>
+      </g>
+    </svg>
+
+    <svg
+      id="visual"
+      class="blob-motion1"
+      viewBox="0 0 900 600"
+      width="900"
+      height="600"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+    >
+      <g transform="translate(446.62525090536974 292.9682283969691)">
+        <path
+          id="blob3"
+          d="M78.8 -33C100.5 -8 115.2 33.5 100.9 57.2C86.6 81 43.3 87 6.5 83.3C-30.3 79.5 -60.6 66 -79.8 39.4C-99 12.8 -107.1 -26.8 -91.9 -48.1C-76.8 -69.3 -38.4 -72.2 -4.9 -69.3C28.6 -66.5 57.2 -58 78.8 -33"
+          fill="#ff9f5c"
+        ></path>
+      </g>
+
+      <g
+        transform="translate(458.9295581170613 295.061437953381)"
+        style="visibility: hidden"
+      >
+        <path
+          id="blob4"
+          d="M89.3 -55.9C100.2 -32.8 82.6 2.3 62.9 35C43.3 67.7 21.7 97.8 -5.3 100.9C-32.3 104 -64.7 80 -86.3 46.2C-108 12.3 -118.9 -31.3 -102.8 -57.5C-86.6 -83.7 -43.3 -92.3 -2 -91.2C39.3 -90 78.5 -79 89.3 -55.9"
+          fill="#ff9f5c"
+        ></path>
+      </g>
+    </svg>
+
+    <script>
+      const tween = KUTE.fromTo(
+        '#blob1',
+        {path: '#blob1'},
+        {path: '#blob2'},
+        {repeat: 999, duration: 3000, yoyo: true},
+      ).start();
+
+      const tween1 = KUTE.fromTo(
+        '#blob3',
+        {path: '#blob3'},
+        {path: '#blob4'},
+        {repeat: 999, duration: 3000, yoyo: true},
+      ).start();
+    </script>
+  </section>
+</body>
+
+</html>
