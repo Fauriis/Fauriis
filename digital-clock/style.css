@@ -20,6 +20,8 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 70px;
+  border: 3px solid white;
+  border-radius: 30;
 }
 
 @media screen and (max-width: 900px) {
@@ -40,31 +42,24 @@ body {
   background-size: cover;
 }
 
-
 @media screen and (max-width: 900px) {
   .blob-motion {
-display: none;
-
+    display: none;
   }
-
 }
 
 .blob-motion {
-position: absolute;
-bottom: 30%;
-left: 40%;
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  /* filter: blur(10px); */
+}
 
-    }
-
-    .blob-motion1 {
-      position: absolute;
-      bottom: 47%;
-      right: 60%;
-
-          }
-
-
-
+.blob-motion1 {
+  position: absolute;
+  bottom: 47%;
+  right: 60%;
+}
 
 .blob-content {
   z-index: 1;
